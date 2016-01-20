@@ -1,0 +1,7 @@
+[Activity]
+name = PyEyes 
+activity_version = 2
+host_version = 1
+service_name = org.laptop.community.PyEyes
+icon = activity
+exec = pyeyes
