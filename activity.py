@@ -1,8 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import eyes
-
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 from gi.repository import Gdk
 
@@ -29,13 +30,13 @@ class PyEyesActivity(Activity):
         rw = screen.get_width() / 2
         rh = screen.get_height() / 2
 
-        self.eye1 = eyes.Eye(Gdk.Color.parse("#FFFFFF")[1])
-        self.eye1.set_size_request(rw, rh)
+        self.eye1 = eyes.Eye(Gdk.RGBA(1.0, 1.0, 1.0, 1.0))
+        self.eye1.set_size_request(int(rw), int(rh))
         self.eye1.set_hexpand(False)
         box.pack_start(self.eye1, True, True, 0)
 
-        self.eye2 = eyes.Eye(Gdk.Color.parse("#FFFFFF")[1])
-        self.eye2.set_size_request(rw, rh)
+        self.eye2 = eyes.Eye(Gdk.RGBA(1.0, 1.0, 1.0, 1.0))
+        self.eye2.set_size_request(int(rw), int(rh))
         self.eye2.set_hexpand(False)
         box.pack_start(self.eye2, True, True, 0)
 

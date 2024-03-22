@@ -1,8 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import math
-
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 from gi.repository import Gdk
 from gi.repository import GdkPixbuf
@@ -147,7 +148,7 @@ class Eye(Gtk.DrawingArea):
 def svg_str_to_pixbuf(svg_string):
     """ Load pixbuf from SVG string """
     pl = GdkPixbuf.PixbufLoader.new_with_type('svg')
-    pl.write(svg_string)
+    pl.write(svg_string.encode())
     pl.close()
     pixbuf = pl.get_pixbuf()
     return pixbuf
