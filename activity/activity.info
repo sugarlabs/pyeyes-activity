@@ -1,8 +1,8 @@
 [Activity]
-name = PyEyes 
+name = PyEyes
 activity_version = 2
 host_version = 1
-service_name = org.laptop.community.PyEyes
+bundle_id = org.laptop.community.PyEyes
 icon = activity
 exec = sugar-activity3 activity.PyEyesActivity
 license = GPLv3
